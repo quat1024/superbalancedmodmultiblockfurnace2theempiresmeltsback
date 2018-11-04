@@ -1,0 +1,16 @@
+[
+{
+  "modid": "superbalancedmodmultiblockfurnace2",
+  "name": "Super Balanced Mod Multiblock Furnace 2: The Empire Smelts Back",
+  "description": "balced furnec",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["quaternary"],
+  "credits": "I blame Lemon.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
