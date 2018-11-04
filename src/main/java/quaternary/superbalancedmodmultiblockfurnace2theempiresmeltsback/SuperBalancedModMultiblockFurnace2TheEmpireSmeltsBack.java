@@ -2,11 +2,14 @@ package quaternary.superbalancedmodmultiblockfurnace2theempiresmeltsback;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -25,6 +28,8 @@ public class SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack {
 	public static final String NAME = "Super Balanced Mod Multiblock Furnace 2: The Empire Smelts Back";
 	public static final String VERSION = "GRADLE:VERSION";
 	
+	public static final Item.ToolMaterial BALANCEMATERIAL = EnumHelper.addToolMaterial("balance", 9999, 6969, 1000, 1000, 1000);
+	
 	public static final CreativeTabs TAB = new CreativeTabs(MODID) {
 		@SideOnly(Side.CLIENT)
 		@Override
@@ -39,6 +44,7 @@ public class SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack {
 	
 	public static Item CLAY_LATTICE = null;
 	public static Item EFFORT_STAR = null;
+	public static Item BALANCED_SWORD = null;
 	
 	@SubscribeEvent
 	public static void blocks(RegistryEvent.Register<Block> e) {
@@ -57,6 +63,7 @@ public class SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack {
 		
 		CLAY_LATTICE = regItem(new Item(), "clay_lattice", reg);
 		EFFORT_STAR = regItem(new Item(), "effort_star", reg);
+		BALANCED_SWORD = regItem(new ItemBalancedSword(), "balanced_sword", reg);
 	}
 	
 	private static <T extends Block> T regBlock(T block, String name, IForgeRegistry<Block> reg) {
@@ -78,5 +85,15 @@ public class SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack {
 		itemBlock.setRegistryName(itemBlock.getBlock().getRegistryName());
 		reg.register(itemBlock);itemBlock.setCreativeTab(TAB);
 		return itemBlock;
+	}
+	
+	@SubscribeEvent
+	public static void damageEvent(LivingDamageEvent e) {
+		if(e.getEntity() instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) e.getEntity();
+			if(player.getHeldItemMainhand().getItem() instanceof ItemBalancedSword || player.getHeldItemOffhand().getItem() instanceof ItemBalancedSword) {
+				e.setCanceled(true);
+			}
+		}
 	}
 }
