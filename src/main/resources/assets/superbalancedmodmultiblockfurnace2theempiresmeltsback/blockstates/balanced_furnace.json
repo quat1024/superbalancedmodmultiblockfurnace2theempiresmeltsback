@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"active=false,facing=north": { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace" },
+		"active=false,facing=south": { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace", "y": 180 },
+		"active=false,facing=west":  { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace", "y": 270 },
+		"active=false,facing=east":  { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace", "y": 90 },
+		"active=true,facing=north": { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace2" },
+		"active=true,facing=south": { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace2", "y": 180 },
+		"active=true,facing=west":  { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace2", "y": 270 },
+		"active=true,facing=east":  { "model": "superbalancedmodmultiblockfurnace2theempiresmeltsback:furnace2", "y": 90 }
+	}
+}

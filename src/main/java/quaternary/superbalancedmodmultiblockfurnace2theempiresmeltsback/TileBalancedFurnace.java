@@ -2,6 +2,7 @@ package quaternary.superbalancedmodmultiblockfurnace2theempiresmeltsback;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -51,7 +52,7 @@ public class TileBalancedFurnace extends TileEntity implements IItemHandler {
 			boolean lit = state.getValue(BlockBalancedFurnace.ACTIVE);
 			if(!lit) return stack;
 			else {
-				ItemStack smeltResult = FurnaceRecipes.instance().getSmeltingResult(stack).copy();
+				ItemStack smeltResult = gasdsadsdmelt(stack);
 				if(smeltResult.isEmpty()) return stack;
 				
 				if(!simulate) {
@@ -71,6 +72,12 @@ public class TileBalancedFurnace extends TileEntity implements IItemHandler {
 		}
 		
 		return stack;
+	}
+	
+	private static ItemStack gasdsadsdmelt(ItemStack yes) {
+		if(yes.getItem() == SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack.EFFORT_STAR) {
+			return new ItemStack(SuperBalancedModMultiblockFurnace2TheEmpireSmeltsBack.BALANCED_SWORD);
+		} else return FurnaceRecipes.instance().getSmeltingResult(yes).copy();
 	}
 	
 	@Nonnull

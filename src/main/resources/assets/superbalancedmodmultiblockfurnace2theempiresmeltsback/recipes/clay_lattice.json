@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"OCO",
+		"COC",
+		"OCO"
+	],
+	"key": {
+		"O": {
+			"item": "minecraft:obsidian"
+		},
+		"C": {
+			"item": "minecraft:clay_ball"
+		}
+	},
+	"result": {
+		"item": "superbalancedmodmultiblockfurnace2theempiresmeltsback:clay_lattice"
+	}
+}

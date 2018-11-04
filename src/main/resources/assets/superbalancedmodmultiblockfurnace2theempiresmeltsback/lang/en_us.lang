@@ -1,0 +1,13 @@
+tile.superbalancedmodmultiblockfurnace2theempiresmeltsback.balanced_furnace.name=Balanced Furnace
+
+item.superbalancedmodmultiblockfurnace2theempiresmeltsback.effort_star.name=Effort Star
+item.superbalancedmodmultiblockfurnace2theempiresmeltsback.clay_lattice.name=Clay Lattice
+item.superbalancedmodmultiblockfurnace2theempiresmeltsback.balanced_sword.name=Balanced Sword
+
+superbalancedmodmultiblockfurnace2theempiresmeltsback.balanced_sword.tooltip=Smelt an Effort Star in a Balanced Furnace
+
+superbalancedmodmultiblockfurnace2theempiresmeltsback.asd=Surround with Clay Blocks to activate Furnace
+superbalancedmodmultiblockfurnace2theempiresmeltsback.asd2=TRIPLES ores! AND EVERYTHING ELSE TOO!
+superbalancedmodmultiblockfurnace2theempiresmeltsback.asd3=There's no GUI just pump items in
+
+itemGroup.superbalancedmodmultiblockfurnace2theempiresmeltsback=Super Balanced Mod Multiblock Furnace 2

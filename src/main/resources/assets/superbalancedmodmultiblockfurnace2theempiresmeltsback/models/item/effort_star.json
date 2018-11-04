@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "superbalancedmodmultiblockfurnace2theempiresmeltsback:effort_star"
+	}
+}

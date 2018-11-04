@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"OCO",
+		"COC",
+		"OCO"
+	],
+	"key": {
+		"O": {
+			"item": "minecraft:nether_star"
+		},
+		"C": {
+			"item": "minecraft:clay"
+		}
+	},
+	"result": {
+		"item": "superbalancedmodmultiblockfurnace2theempiresmeltsback:effort_star"
+	}
+}

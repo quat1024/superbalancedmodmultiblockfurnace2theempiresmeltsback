@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"LLL",
+		"LEL",
+		"LLL"
+	],
+	"key": {
+		"L": {
+			"item": "superbalancedmodmultiblockfurnace2theempiresmeltsback:clay_lattice"
+		},
+		"E": {
+			"item": "superbalancedmodmultiblockfurnace2theempiresmeltsback:effort_star"
+		}
+	},
+	"result": {
+		"item": "superbalancedmodmultiblockfurnace2theempiresmeltsback:balanced_furnace"
+	}
+}
